@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/regist.css') }}">
+
+</head>
+<body>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/register_status_check.js') }}"></script>
+    <div class="wrapper">
+        <article>
+            <h1><em>团队</em><span>中国人民大学信息学院</span></h1>
+            <div class="main">
+                <form id="regist_form">
+
+                    <div class="userName">
+                        <input type="text" name="userName" placeholder="用户名"><em>由5-8个字符组成！</em>
+                    </div>
+                    <div class="password">
+                        <input type="text" name="pwd" placeholder="密码"><em>使用字母、数字、符号两种及以上的组合，8-12个字符</em>
+                    </div>
+                    <div class="password">
+                        <input type="text" name="email" placeholder="邮箱"><em>邮箱</em>
+                    </div>
+                    <button onclick="start_register()">注册</button>
+                    <a href="http://127.0.0.1:8777/user">登录</a>
+                </form>
+
+            </div>
+        </article>
+        <footer>
+            <ul>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关注我们</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">信息学院</a></li>
+                <li><a href="#">研究内容</a></li>
+            </ul>
+            <p>本网站版权归人大信息学院团队所有<a href="http://www.mycodes.net/" target="_blank"></a></p>
+        </footer>
+    </div>
+</body>
+</html>
+

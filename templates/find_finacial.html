@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 公共样式 开始 -->
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="信息学院" />
+		<!-- 作者 -->
+		<meta name="revised" content="数据库.v3, 2019/12/13" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>信息学院出品</title>
+
+		<link rel="shortcut icon" href=" {{ url_for('static',filename='images/bg.jpg') }}"/>
+		<link rel="bookmark" href="{{ url_for('static',filename='images/bg.jpg') }}">
+
+		<link rel="stylesheet" type="text/css" href=" {{ url_for('static',filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/iconfont.css') }}">
+		<script type="text/javascript" src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}" ></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='layui/css/layui.css') }}">
+		<script type="text/javascript" src=" {{ url_for('static',filename='layui/layui.js') }}"></script>
+
+		<!-- 滚动条插件 -->
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery-ui-1.10.4.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mousewheel.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mCustomScrollbar.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/cframe.js') }}"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+</head>
+<body>
+    <div class="all">
+        <form class="layui-form" action="" id="demo">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+                                <input type="text" name="name" required lay-verify="required" placeholder="输入股票代码" autocomplete="off" class="layui-input">
+                            </div>
+                            <button type="button" class="layui-btn" lay-submit lay-filter="formDemo" id="dasdf" data-type="reload">检索</button>
+                        </div>
+        </form>
+        <table id="demo2" lay-filter="test"></table>
+        <script>
+            var paras = 1;
+
+
+
+            layui.use('table',function () {
+                var table = layui.table;
+                table.render({
+                    elem: '#demo2',
+                    id: 'list',
+                    type: 'post',
+                    height: 500,
+                    url: 'http://127.0.0.1:8777/find_finacial_data',
+                    page: true,
+                    limit: 10,
+
+
+                    where: {'socket_code': paras},
+                    loading: false,
+                    LAY_CHECKED: true,
+                    cols: [[{field: 'socket_code', title: '股票代码', width: 400},
+                        {field: 'director_money', title: '金额最高的前三名董事的报酬总额', width: 400},
+                        {field: 'manager_money', title: '金额最高的前三名高级管理人员的报酬总额', width: 400},
+                        {field: 'independent_director_money', title: '独立董事津贴', width: 400},]]
+                });
+
+                var $ = layui.$, active = {
+                reload: function(){
+                //获取用户名
+                    console.log("----------------");
+                    var form= new FormData(document.getElementById("demo"));
+
+                    var values = {};
+                    for (var value of form) {
+                        // 	console.log("value:"+typeof(value));
+                       values[value[0]] = value[1];
+                       console.log(values);
+                    }
+
+                    paras = values['name'];
+
+
+                    table.reload('list', {
+                        elem: '#demo2',
+                        id: 'list',
+                        type: 'post',
+                        height: 500,
+                        url: 'http://127.0.0.1:8777/find_finacial_data',
+                        page: true,
+                        limit: 10,
+
+
+                        where: {'socket_code': paras},
+                        loading: false,
+                        LAY_CHECKED: true,
+                        cols: [[{field: 'socket_code', title: '股票代码', width: 180},
+                            {field: 'director_money', title: '金额最高的前三名董事的报酬总额', width: 400},
+                            {field: 'manager_money', title: '金额最高的前三名高级管理人员的报酬总额', width: 400},
+                            {field: 'independent_director_money', title: '独立董事津贴', width: 200},]]
+                      });
+                   }
+             };
+	  //点击搜索按钮根据用户名称查询
+              $('#dasdf').on('click',
+                  function(){
+                      console.log("1231231242354345");
+                      var type = $(this).data('type');
+                      console.log(type);
+                      active[type] ? active[type].call(this) : '';
+                  });
+
+    });
+
+
+
+
+
+
+
+
+        </script>
+
+    </div>
+</body>
+</html>

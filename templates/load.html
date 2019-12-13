@@ -1,0 +1,136 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>登陆界面1</title>
+
+	 <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<!-- 导航 -->
+
+		<div class="nav">
+
+			<ul>
+
+				<li><a href="#">查询</a></li>
+
+				<li><a href="#">分析</a></li>
+
+				<li><a href="#">信息修改</a></li>
+
+				<li><a href="#">首页</a></li>
+
+			</ul>
+
+		</div>
+
+
+
+		<!-- 主体内容 （登陆界面）-->
+
+		<div class="main">
+
+			<!-- 左侧信息栏 -->
+
+			<div class="sideleft">
+
+				<h1>上市企业信息披露管理系统 </h1>
+
+				<h4>团队：徐晨 江长久 刘洋凡 邵宇 陕杰才</h4>
+
+				</br></br></br>
+
+				<p>查询/增加/删除上市企业的基础信息、企业的涉案信息、公告信息</p>
+
+				<p>分析企业涉案情况。 </p>
+
+				<p>分析个人股东、企业股东持股的变化情况。</p>
+
+				<p>企业架构分析和企业财务报表</p>
+
+
+
+			</div>
+
+			<!-- 右侧登陆界面 -->
+
+			<div class="sideright">
+
+				<div class="index">
+
+					<form action="http://127.0.0.1:8777/user"  method="get">
+
+						<p class="headline">用户登陆</p>
+
+						<p class="astyle">用户名：</p>
+
+						<input type="text" name="username" value="请输入您的手机号">
+
+						<p class="astyle">密码：</p>
+
+						<input type="text" name="password" value="请输入密码">
+
+						<input type="submit" value="登陆" name="login" >
+
+						</br>
+
+						<p class="bstyle"><input type="checkbox" name="rempas" />  记住密码</p>
+
+						<p class="cstyle">忘记密码</p>
+
+						</br></br>
+
+						<p class="cstyle">没有账号？<a href="http://127.0.0.1:8777/regist">立即注册</a></p>
+
+					</form>
+
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- 尾部 -->
+
+		<div class="footer">
+
+				<ul>
+
+					<li><a href="#">关于我们</a></li>
+
+
+
+					<li><a href="#">联系我们</a></li>
+
+
+
+					<li><a href="#">中国人民大学信息学院</a></li>
+
+				</ul>
+
+
+
+		</div>
+
+
+
+	</div>
+
+</body>
+
+</html>
