@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +16,7 @@
       	           charts_paras:{{ charts_paras|safe }}
   	    };
 
-    	    var total_price = {
-    	          total_price : {{ accumulate_trade_money | safe }}
-            };
+
 
 
 
@@ -49,39 +47,39 @@
                     </div>
                 </div>
                 <div class="left_bottom">
-                    <div class="left_top_title">业务类型</div>
-                    <div id="Business_type" class="left_top_main left_bottom_main"></div>
+                    <div class="left_top_title">公司在案件中地位比例</div>
+                    <div id="crime_position" class="left_top_main left_bottom_main"></div>
                 </div>
             </div>
             <div class="data_middle">
                 <div class="middle_top">
                     <div class="middle_top_list">
-                        <div class="list_title">累计关联公司</div>
-                        <div class="list_num list_num1"><span class="counter-value">{{ accumulate_company }}</span>个</div>
+                        <div class="list_title">公司涉案金额总数</div>
+                        <div class="list_num list_num1"><span class="counter-value">{{ accumulate_CR_5_index }}</span></div>
 
                     </div>
                     <div class="middle_top_list">
-                        <div class="list_title">累计交易金额</div>
-                        <div class="list_num list_num2"><span class="counter-value">{{ accumulate_trade_money }}</span>亿</div>
+                        <div class="list_title">公司被告案件数</div>
+                        <div class="list_num list_num2"><span class="counter-value">{{ accumulate_Z_index }}</span></div>
 
                     </div>
                     <div class="middle_top_list">
-                        <div class="list_title">累计交易种类</div>
-                        <div class="list_num list_num3"><span class="counter-value">{{ accumulate_trade_cat }}</span>种</div>
+                        <div class="list_title">公司原告案件数</div>
+                        <div class="list_num list_num3"><span class="counter-value">{{ accumulate_Herfindahl_5_index }}</span></div>
 
                     </div>
                 </div>
-                <div class="a" style="color: #D0D0D0; margin-top: 8px">控制方关系交易额分析表</div>
-                <div id="map" style="margin-top: -20px" class="middle_bottom"></div>
+                <div class="a" style="color: #D0D0D0; margin-top: 8px">公司年度涉案变化情况</div>
+                <div id="z_index" style="margin-top: -20px" class="middle_bottom"></div>
             </div>
             <div class="data_right">
                 <div class="right_top">
-                    <div class="left_top_title">公司交易额分析表</div>
-                    <div id="Land_analysis" class="left_top_main right_top_main"></div>
+                    <div class="left_top_title">公司涉案金额变化情况</div>
+                    <div id="CR_10_index" class="left_top_main right_top_main"></div>
                 </div>
                 <div class="right_bottom">
-                    <div class="left_top_title">交易额随时间变化表</div>
-                    <div id="Information_Delivery" class="left_top_main right_top_main"></div>
+                    <div class="left_top_title">涉案类型比例</div>
+                    <div id="Herfindahl_5_index" class="left_top_main right_top_main"></div>
                 </div>
             </div>
         </div>
@@ -92,4 +90,4 @@
  <script src="{{ url_for('static',filename='js/jquery-1.8.3.min.js') }}"></script>
 
     <script src="{{ url_for('static',filename='js/echarts-en.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/analyse_chars.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/analyse_meeting_chars.js') }}"></script>

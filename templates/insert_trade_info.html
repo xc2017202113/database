@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 公共样式 开始 -->
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="信息学院" />
+		<!-- 作者 -->
+		<meta name="revised" content="数据库.v3, 2019/12/13" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>信息学院出品</title>
+
+		<link rel="shortcut icon" href=" {{ url_for('static',filename='images/bg.jpg') }}"/>
+		<link rel="bookmark" href="{{ url_for('static',filename='images/bg.jpg') }}">
+
+		<link rel="stylesheet" type="text/css" href=" {{ url_for('static',filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/iconfont.css') }}">
+		<script type="text/javascript" src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}" ></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='layui/css/layui.css') }}">
+		<script type="text/javascript" src=" {{ url_for('static',filename='layui/layui.js') }}"></script>
+
+		<!-- 滚动条插件 -->
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery-ui-1.10.4.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mousewheel.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mCustomScrollbar.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/cframe.js') }}"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+</head>
+<body>
+    <form class="layui-form" action="">
+          <div class="layui-form-item">
+            <label class="layui-form-label">股票代码</label>
+            <div class="layui-input-block">
+              <input type="text" name="socket_code" required  lay-verify="required" placeholder="请输入股票代码" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">年度</label>
+            <div class="layui-input-block">
+              <input type="text" name="date" required  lay-verify="required" placeholder="请输入年度" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">最终控制人类型</label>
+            <div class="layui-input-block">
+              <select name="final_control_status" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">交易状态</label>
+            <div class="layui-input-block">
+              <select name="trade_status" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+          </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">公告日期</label>
+            <div class="layui-input-block">
+              <input type="text" name="on_date" required  lay-verify="required" placeholder="请输入公告日期" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">关联方企业人名称</label>
+            <div class="layui-input-block">
+              <input type="text" name="company_name" required  lay-verify="required" placeholder="请输入关联方企业人名称" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">关联方控制关系</label>
+             <div class="layui-input-block">
+              <select name="control_relations" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                  <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">关联方与上市公司关系</label>
+             <div class="layui-input-block">
+              <select name="control_company_relations" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                  <option value="6">6</option>
+              </select>
+            </div>
+          </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">信息来源</label>
+             <div class="layui-input-block">
+              <select name="info_source" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+
+              </select>
+            </div>
+          </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">币种</label>
+             <div class="layui-input-block">
+              <select name="money_type" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                  <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">货币单位</label>
+             <div class="layui-input-block">
+              <select name="money_units" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                  <option value="2">2</option>
+              </select>
+            </div>
+          </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">交易涉及金额</label>
+            <div class="layui-input-block">
+              <input type="text" name="trade_money" required  lay-verify="required" placeholder="请输入交易涉及金额" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">交易类型</label>
+            <div class="layui-input-block">
+              <input type="text" name="trade_type" required  lay-verify="required" placeholder="请输入交易类型" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+          </div>
+    </form>
+
+    <script>
+    //Demo
+    layui.use('form', function(){
+      var form = layui.form;
+
+      //监听提交
+
+      form.on('submit(formDemo)', function(data){
+          console.log(data.field);
+            $.ajax({
+                url:'/insert_trade_check',
+                method:'post',
+                data:data.field,
+                dataType:'JSON',
+                async : false,
+                success:function (res) {
+                    var status = res['status'];
+                    console.log(status);
+                    if(status === 0)
+                    {
+                        alert("insert success")
+                    }
+                    else
+                    {
+                        alert("insert ERROR!")
+                    }
+
+                },
+                 error: function (xhr, type) {
+                     console.log("123123123123");
+                     //print("123132");
+                     alert(xhr);
+                 }
+
+            })
+      });
+    });
+    </script>
+</body>
+</html>

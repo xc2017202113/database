@@ -39,6 +39,7 @@
     var years_money_accumulate = charts_paras['years_money_accumulate'];
     var company_money_accumulate = charts_paras['company_money_accumulate'];
     var trade_type_accmuldate = charts_paras['trade_type_accmuldate'];
+    var relation_accumulate = charts_paras['relation_accumulate'];
     console.log(trade_type_accmuldate);
 
     var type_bar_data = [];
@@ -257,6 +258,74 @@
     };
     myChart3.setOption(option3);
 
+     var Axis_relation = [];
+     var relation_counts = [];
+    for(let KEY in  relation_accumulate)
+    {
+        console.log(relation_accumulate[KEY]);
+        relation_counts.push(relation_accumulate[KEY]);
+        Axis_relation.push(String(KEY));
+
+    }
+
+    var myChart4 = echarts.init(document.getElementById('map'));
+
+    option4 = {
+        legend: {
+            x: 'right',
+            y: 'top',
+            data:['years_changes'],
+            textStyle: {
+                color: '#EEEE00',
+            }
+        },
+        xAxis:{
+
+                data:Axis_relation,
+        axisLine: {
+                lineStyle: {
+                    color: "#EEEE00",
+                }
+            },
+
+
+            },
+        yAxis:{
+            axisLine: {
+                lineStyle: {
+                    color: "#EEEE00",
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: '#EEEE00'
+                }
+            }
+        },
+        series:[{
+                name:'apple',
+                type:'line',
+                itemStyle:{
+                    normal:{ color: "#8DEEEE" }
+                    },
+                lineStyle:{
+                    normal:{
+                        width:2,
+                        color: "#8DEEEE"  }//线条的颜色及宽度
+                    },
+                label: {//线条上的数字提示信息
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+
+                    },
+                smooth: true,//线条平滑                    //data为每年apple的数量
+                data:relation_counts
+
+            }]
+    };
+    myChart4.setOption(option4);
 
     // 随机数据
     // var data = [{ "name": "长沙", "value": 46 }, { "name": "株洲", "value": 81 }, { "name": "湘潭", "value": 94 }, { "name": "衡阳", "value": 40 }, { "name": "邵阳", "value": 67 }, { "name": "岳阳", "value": 38 }, { "name": "常德", "value": 50 }, { "name": "张家界", "value": 48 }, { "name": "益阳", "value": 77 }, { "name": "郴州", "value": 78 }, { "name": "永州", "value": 57 }, { "name": "怀化", "value": 83 }, { "name": "娄底", "value": 43 }, { "name": "湘西", "value": 75 }];

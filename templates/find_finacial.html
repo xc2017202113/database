@@ -45,6 +45,8 @@
                             <div class="layui-input-inline">
                                 <input type="text" name="name" required lay-verify="required" placeholder="输入股票代码" autocomplete="off" class="layui-input">
                             </div>
+
+
                             <button type="button" class="layui-btn" lay-submit lay-filter="formDemo" id="dasdf" data-type="reload">检索</button>
                         </div>
         </form>
@@ -70,6 +72,7 @@
                     loading: false,
                     LAY_CHECKED: true,
                     cols: [[{field: 'socket_code', title: '股票代码', width: 400},
+                        {field: 'year', title: '年份', width: 400},
                         {field: 'director_money', title: '金额最高的前三名董事的报酬总额', width: 400},
                         {field: 'manager_money', title: '金额最高的前三名高级管理人员的报酬总额', width: 400},
                         {field: 'independent_director_money', title: '独立董事津贴', width: 400},]]
@@ -105,8 +108,10 @@
                         loading: false,
                         LAY_CHECKED: true,
                         cols: [[{field: 'socket_code', title: '股票代码', width: 180},
+                            {field: 'year', title: '年份', width: 400},
                             {field: 'director_money', title: '金额最高的前三名董事的报酬总额', width: 400},
                             {field: 'manager_money', title: '金额最高的前三名高级管理人员的报酬总额', width: 400},
+
                             {field: 'independent_director_money', title: '独立董事津贴', width: 200},]]
                       });
                    }

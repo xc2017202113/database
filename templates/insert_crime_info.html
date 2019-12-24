@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 公共样式 开始 -->
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="信息学院" />
+		<!-- 作者 -->
+		<meta name="revised" content="数据库.v3, 2019/12/13" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>信息学院出品</title>
+
+		<link rel="shortcut icon" href=" {{ url_for('static',filename='images/bg.jpg') }}"/>
+		<link rel="bookmark" href="{{ url_for('static',filename='images/bg.jpg') }}">
+
+		<link rel="stylesheet" type="text/css" href=" {{ url_for('static',filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/iconfont.css') }}">
+		<script type="text/javascript" src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}" ></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='layui/css/layui.css') }}">
+		<script type="text/javascript" src=" {{ url_for('static',filename='layui/layui.js') }}"></script>
+
+		<!-- 滚动条插件 -->
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery-ui-1.10.4.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mousewheel.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mCustomScrollbar.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/cframe.js') }}"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
+</head>
+<body>
+    <form class="layui-form" action="">
+          <div class="layui-form-item">
+            <label class="layui-form-label">股票代码</label>
+            <div class="layui-input-block">
+              <input type="text" name="socket_code2" required  lay-verify="required" placeholder="请输入股票代码" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">公告日期</label>
+            <div class="layui-input-block">
+              <input type="text" name="date" required  lay-verify="required" placeholder="请输入公告日期" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">涉案类型</label>
+            <div class="layui-input-block">
+              <input type="text" name="crime_type" required  lay-verify="required" placeholder="请输入涉案类型" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">公司在案件中地位</label>
+            <div class="layui-input-block">
+              <select name="position" lay-verify="required">
+                <option value=""></option>
+                <option value="原告">原告</option>
+                <option value="被告">被告</option>
+                <option value="第三方">第三方</option>
+
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">案由</label>
+            <div class="layui-input-block">
+              <input type="text" name="reason" required  lay-verify="required" placeholder="请输入案由" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">案件所涉及金额</label>
+            <div class="layui-input-block">
+              <input type="text" name="money" required  lay-verify="required" placeholder="请输入案件所涉及金额" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+         <div class="layui-form-item">
+            <label class="layui-form-label">判决情况</label>
+            <div class="layui-input-block">
+              <input type="text" name="jugde" required  lay-verify="required" placeholder="请输入执行情况" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">执行情况</label>
+            <div class="layui-input-block">
+              <input type="text" name="excute" required  lay-verify="required" placeholder="请输入判决情况" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">币种</label>
+             <div class="layui-input-block">
+              <select name="money_type" lay-verify="required">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+          </div>
+    </form>
+
+    <script>
+    //Demo
+    layui.use('form', function(){
+      var form = layui.form;
+
+      //监听提交
+
+      form.on('submit(formDemo)', function(data){
+          console.log(data.field);
+            $.ajax({
+                url:'/insert_crime_check',
+                method:'post',
+                data:data.field,
+                dataType:'JSON',
+                async : false,
+                success:function (res) {
+                    var status = res['status'];
+                    console.log(status);
+                    if(status === 0)
+                    {
+                        alert("insert success")
+                    }
+                    else
+                    {
+                        alert("insert ERROR!")
+                    }
+
+                },
+                 error: function (xhr, type) {
+                     console.log("123123123123");
+                     //print("123132");
+                     alert(xhr);
+                 }
+
+            })
+      });
+    });
+    </script>
+</body>
+</html>

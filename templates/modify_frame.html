@@ -58,19 +58,24 @@
 		        <ul>
 
 		        	<li>
-		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-liuliangyunpingtaitubiao03 left"></i>财务信息查询<i class="iconfont icon-dajiantouyou right"></i></a>
+		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-liuliangyunpingtaitubiao03 left"></i>增加企业信息<i class="iconfont icon-dajiantouyou right"></i></a>
 		                <dl>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('find_finacial',this)">查询报酬情况</a></dt>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('find_company_struture',this)">查询公司结构情况</a></dt>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('insert_company_info',this)">增加公司信息</a></dt>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('insert_socket_info',this)">增加股票信息</a></dt>
+                            <dt><a href="javascript:void(0)" onclick="menuCAClick('insert_trade_info',this)">增加交易信息</a></dt>
+                            <dt><a href="javascript:void(0)" onclick="menuCAClick('insert_crime_info',this)">增加公司涉案情况</a></dt>
+
 		                </dl>
 		            </li>
-
 		        	<li>
-		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-caiwu left"></i>财务管理</a>
-                        <dl>
-		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('balanced_sheet',this)">资产负债表</a></dt>
+		                <a class="menuFA" href="javascript:void(0)"><i class="iconfont icon-shangpin left"></i>修改企业信息<i class="iconfont icon-dajiantouyou right"></i></a>
+		                <dl>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('modify_company_info',this)">修改公司信息</a></dt>
+		                	<dt><a href="javascript:void(0)" onclick="menuCAClick('modify_socket_info',this)">修改股票信息</a></dt>
+
+
 		                </dl>
-		           	</li>
+		            </li>
 
 		        </ul>
 		    </div>
@@ -83,7 +88,7 @@
 
 				<div class="topMenu">
 					<ul>
-                        <li><a href="main_page"><i class="iconfont icon-xiugaimima"></i>主界面</a></li>
+						<li><a href="main_page"><i class="iconfont icon-xiugaimima"></i>主界面</a></li>
 						<li><a href="javascript:void(0)" onclick="menuCAClick('tgls/modify_password.html',this)"><i class="iconfont icon-yonghu1"></i>管理员</a></li>
 						<li><a href="modify_password_html"><i class="iconfont icon-xiugaimima"></i>修改密码</a></li>
 						<li><a href="login.html"><i class="iconfont icon-084tuichu"></i>注销</a></li>
@@ -98,7 +103,7 @@
 					<span><i class="iconfont icon-xianshiqi"></i>后台首页</span>
 				</div>
 				<div class="con">
-					<iframe id="mainIframe" src="find_finacial" scrolling="no"></iframe>
+					<iframe id="mainIframe" src="tgls/qdAPI.html" scrolling="no"></iframe>
 				</div>
 			</div>
 			<!-- 核心区域 - 结束 -->
