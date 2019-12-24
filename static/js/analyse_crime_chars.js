@@ -40,7 +40,7 @@
     var years_crime_change = charts_paras['years_crime_change']; //折线图 年度涉案情况变化
     var year_money_change = charts_paras['year_money_change'];
     var crime_type = charts_paras['crime_type'];
-   
+
 
     var type_bar_data = [];
     var series_data = [];

@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1597753f-ac24-47bc-8e5d-005ce1220cb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modify_password.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_crime_charts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_crime_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_index_charts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_index_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_meeting_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_trade_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/find_company_struture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/insert_company_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/insert_crime_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/insert_socket_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/insert_trade_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modify_company_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modify_socket_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/analyse_chars.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/analyse_chars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analyse.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analyse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/find_finacial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/find_finacial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/find_frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/find_frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/load.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/load.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/regist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/regist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/analyse_crime_chars.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/analyse_crime_chars.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="341" column="18" selection-start-line="341" selection-start-column="14" selection-end-line="341" selection-end-column="18" />
+            <state relative-caret-position="1000">
+              <caret line="338" column="54" lean-forward="true" selection-start-line="322" selection-end-line="338" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -111,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/analyse_crime_chars.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+            <state relative-caret-position="244">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#3244#4557#0" />
                 <element signature="e#4705#6032#0" />
@@ -263,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="88" />
     <option name="y" value="26" />
     <option name="width" value="2409" />
@@ -380,12 +356,12 @@
       <workItem from="1576234724657" duration="10115000" />
       <workItem from="1576815604080" duration="25293000" />
       <workItem from="1576857788438" duration="34969000" />
-      <workItem from="1577026659978" duration="10438000" />
+      <workItem from="1577026659978" duration="11574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169178000" />
+    <option name="totallyTimeSpent" value="170314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="21" width="1927" height="1071" extended-state="0" />
@@ -936,13 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="341" column="18" selection-start-line="341" selection-start-column="14" selection-end-line="341" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -979,12 +948,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/analyse_crime_chars.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        <state relative-caret-position="244">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#3244#4557#0" />
             <element signature="e#4705#6032#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="338" column="54" lean-forward="true" selection-start-line="322" selection-end-line="338" selection-end-column="54" />
         </state>
       </provider>
     </entry>
