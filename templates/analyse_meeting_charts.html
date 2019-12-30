@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index_analyse.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/globle_analyse.css') }}">
+
+</head>
+<body>
+    <script type="text/javascript">
+    	    var Server = {
+      	           charts_paras:{{ charts_paras|safe }}
+  	    };
+
+
+
+
+
+
+    </script>
+    <div class="main">
+        <div class="top_title">
+            <img src="{{ url_for('static',filename='images/top_title.png') }}" />
+        </div>
+        <div class="datas">
+            <div class="data_left">
+                <div class="left_top">
+                    <div class="left_top_title">基础数据</div>
+                    <div class="left_top_main">
+                        <div class="left_main_circle">
+                            <p class="counter-value circle_num1">{{ socket_code }}</p>
+                            <span class="span_font">股票代码<br /></span>
+                        </div>
+                        <div class="left_main_circle">
+                            <p class="counter-value circle_num2">{{ start_years }}</p>
+                            <span class="span_font">开始年份<br />(年)</span>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="left_bottom">
+                    <div class="left_top_title">股东持股比例变化</div>
+                    <div id="noflow_scale_change" class="left_top_main left_bottom_main"></div>
+                </div>
+            </div>
+            <div class="data_middle">
+                <div class="middle_top">
+                    <div class="middle_top_list">
+                        <div class="list_title">股东持股总数</div>
+                        <div class="list_num list_num1"><span class="counter-value">{{ noflow_total }}</span></div>
+
+                    </div>
+                    <div class="middle_top_list">
+                        <div class="list_title">流通股东持股总数</div>
+                        <div class="list_num list_num2"><span class="counter-value">{{ flow_total }}</span></div>
+
+                    </div>
+                    <div class="middle_top_list">
+                        <div class="list_title">总持股变化</div>
+                        <div class="list_num list_num3"><span class="counter-value">{{ total }}</span></div>
+
+                    </div>
+                </div>
+                <div class="a" style="color: #D0D0D0; margin-top: 8px">流动股东持股数量变化</div>
+                <div id="flow_change" style="margin-top: -20px" class="middle_bottom"></div>
+            </div>
+            <div class="data_right">
+                <div class="right_top">
+                    <div class="left_top_title">股东持股数量变化</div>
+                    <div id="noflow_change" class="left_top_main right_top_main"></div>
+                </div>
+                <div class="right_bottom">
+                    <div class="left_top_title">流动股东持股比例变化</div>
+                    <div id="flow_scale_change" class="left_top_main right_top_main"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+ <script src="{{ url_for('static',filename='js/jquery-1.8.3.min.js') }}"></script>
+
+    <script src="{{ url_for('static',filename='js/echarts-en.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/analyse_meeting_chars.js') }}"></script>

@@ -1,93 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- 公共样式 开始 -->
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<!-- Google Chrome Frame也可以让IE用上Chrome的引擎: -->
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="信息学院" />
+		<!-- 作者 -->
+		<meta name="revised" content="数据库.v3, 2019/12/13" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<title>信息学院出品</title>
 
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/index_analyse.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/globle_analyse.css') }}">
+		<link rel="shortcut icon" href=" {{ url_for('static',filename='images/bg.jpg') }}"/>
+		<link rel="bookmark" href="{{ url_for('static',filename='images/bg.jpg') }}">
 
+		<link rel="stylesheet" type="text/css" href=" {{ url_for('static',filename='css/base.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/iconfont.css') }}">
+		<script type="text/javascript" src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}" ></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='layui/css/layui.css') }}">
+		<script type="text/javascript" src=" {{ url_for('static',filename='layui/layui.js') }}"></script>
+
+		<!-- 滚动条插件 -->
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/jquery.mCustomScrollbar.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery-ui-1.10.4.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mousewheel.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/jquery.mCustomScrollbar.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/cframe.js') }}"></script><!-- 仅供所有子页面使用 -->
+		<!-- 公共样式 结束 -->
 </head>
 <body>
-    <script type="text/javascript">
-    	    var Server = {
-      	           charts_paras:{{ charts_paras|safe }}
-  	    };
+    <div class="all">
+        <form class="layui-form" action="analyse_meeting" id="demo">
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline">
+                                <input type="text" name="socket_code" required lay-verify="required" placeholder="输入股票代码" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" name="start_years" required lay-verify="required" placeholder="请输入查询的年份" autocomplete="off" class="layui-input">
+                            </div>
 
-
-
-
-
-
-    </script>
-    <div class="main">
-        <div class="top_title">
-            <img src="{{ url_for('static',filename='images/top_title.png') }}" />
-        </div>
-        <div class="datas">
-            <div class="data_left">
-                <div class="left_top">
-                    <div class="left_top_title">基础数据</div>
-                    <div class="left_top_main">
-                        <div class="left_main_circle">
-                            <p class="counter-value circle_num1">{{ socket_code }}</p>
-                            <span class="span_font">股票代码<br /></span>
+                            <button type="submit" class="layui-btn" lay-submit lay-filter="formDemo" id="dasdf" data-type="reload">检索</button>
                         </div>
-                        <div class="left_main_circle">
-                            <p class="counter-value circle_num2">{{ start_years }}</p>
-                            <span class="span_font">开始年份<br />(年)</span>
-                        </div>
-                        <div class="left_main_circle">
-                            <p class="counter-value circle_num3">{{ end_years }}</p>
-                            <span class="span_font">开始年份<br />(年)</span>
-                        </div>
+        </form>
 
-                    </div>
-                </div>
-                <div class="left_bottom">
-                    <div class="left_top_title">公司在案件中地位比例</div>
-                    <div id="crime_position" class="left_top_main left_bottom_main"></div>
-                </div>
-            </div>
-            <div class="data_middle">
-                <div class="middle_top">
-                    <div class="middle_top_list">
-                        <div class="list_title">公司涉案金额总数</div>
-                        <div class="list_num list_num1"><span class="counter-value">{{ accumulate_CR_5_index }}</span></div>
 
-                    </div>
-                    <div class="middle_top_list">
-                        <div class="list_title">公司被告案件数</div>
-                        <div class="list_num list_num2"><span class="counter-value">{{ accumulate_Z_index }}</span></div>
 
-                    </div>
-                    <div class="middle_top_list">
-                        <div class="list_title">公司原告案件数</div>
-                        <div class="list_num list_num3"><span class="counter-value">{{ accumulate_Herfindahl_5_index }}</span></div>
-
-                    </div>
-                </div>
-                <div class="a" style="color: #D0D0D0; margin-top: 8px">公司年度涉案变化情况</div>
-                <div id="z_index" style="margin-top: -20px" class="middle_bottom"></div>
-            </div>
-            <div class="data_right">
-                <div class="right_top">
-                    <div class="left_top_title">公司涉案金额变化情况</div>
-                    <div id="CR_10_index" class="left_top_main right_top_main"></div>
-                </div>
-                <div class="right_bottom">
-                    <div class="left_top_title">涉案类型比例</div>
-                    <div id="Herfindahl_5_index" class="left_top_main right_top_main"></div>
-                </div>
-            </div>
-        </div>
     </div>
-
 </body>
 </html>
- <script src="{{ url_for('static',filename='js/jquery-1.8.3.min.js') }}"></script>
-
-    <script src="{{ url_for('static',filename='js/echarts-en.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/analyse_meeting_chars.js') }}"></script>
