@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1597753f-ac24-47bc-8e5d-005ce1220cb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/analyse_meeting_chars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/analyse_meeting_charts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/上市公司治理结构_基本信息.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/上市公司治理结构_基本信息.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analyse_frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analyse_frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analyse_meeting_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analyse_meeting_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/find_frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/find_frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modify_frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modify_frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sort_case.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sort_case.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="1963">
+              <caret line="796" column="25" selection-start-line="796" selection-start-column="25" selection-end-line="796" selection-end-column="25" />
               <folding>
                 <element signature="e#1970#3101#0" />
                 <element signature="e#3344#4826#0" />
@@ -48,11 +40,12 @@
                 <element signature="e#7232#9521#0" />
                 <element signature="e#9600#12133#0" />
                 <element signature="e#12216#14344#0" />
+                <element signature="e#14971#15308#0" />
                 <element signature="e#14759#15011#0" />
                 <element signature="e#15066#16077#0" />
                 <element signature="e#16309#23088#0" />
-                <element signature="e#24094#25232#0" />
-                <element signature="e#25314#26568#0" />
+                <element signature="e#25512#26677#0" />
+                <element signature="e#26762#27922#0" />
                 <element signature="e#26658#27657#0" />
                 <element signature="e#27740#28622#0" />
                 <element signature="e#28709#29736#0" />
@@ -118,11 +111,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="250">
+              <caret line="113" column="26" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="26" />
               <folding>
                 <element signature="e#288#711#0" />
+                <element signature="e#1721#3431#0" />
+                <element signature="e#5109#9256#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sort_case.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -141,8 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>counter-value</find>
-      <find>left_main_circle</find>
       <find>大数据可视化平台</find>
       <find>湖南</find>
       <find>Business_type</find>
@@ -171,6 +173,8 @@
       <find>交易信息</find>
       <find>find_balanced_sheet_data</find>
       <find>flow_scale_change</find>
+      <find>def find_case_data</find>
+      <find>公司信息</find>
     </findStrings>
     <replaceStrings>
       <replace>REAL</replace>
@@ -186,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/index.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c686860b-9e1b-4129-b302-39e46078ccef/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/153e6bfd-e300-4b63-8610-48cbbda9baca/console.sql" />
         <option value="bc29119f-501a-438c-a4a2-74aa9fb29ca1/collation/armscii8_general_ci" />
@@ -235,12 +238,13 @@
         <option value="$PROJECT_DIR$/templates/find_frame.html" />
         <option value="$PROJECT_DIR$/templates/analyse_frame.html" />
         <option value="$PROJECT_DIR$/templates/modify_frame.html" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql" />
+        <option value="$PROJECT_DIR$/templates/sort_case.html" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="112" />
     <option name="width" value="2445" />
     <option name="height" value="1413" />
@@ -291,7 +295,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="J:/templates/find_frame.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -332,15 +336,15 @@
       <workItem from="1576815604080" duration="25293000" />
       <workItem from="1576857788438" duration="34969000" />
       <workItem from="1577026659978" duration="22894000" />
-      <workItem from="1577679741144" duration="2939000" />
+      <workItem from="1577679741144" duration="6472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184573000" />
+    <option name="totallyTimeSpent" value="188106000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="0" width="1956" height="1130" extended-state="0" />
+    <frame x="90" y="0" width="1956" height="1130" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24472573" />
@@ -357,9 +361,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.31626505" side_tool="true" weight="0.22699386" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.68373495" weight="0.24044265" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.68373495" visible="true" weight="0.18410462" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.2883569" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="13" sideWeight="0.94779116" visible="true" weight="0.35110664" />
+      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.94779116" weight="0.35110664" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -397,15 +401,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/jquery.mousewheel.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/cframe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1210">
@@ -740,20 +735,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sort_case.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="250">
+          <caret line="113" column="26" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="26" />
           <folding>
             <element signature="e#288#711#0" />
+            <element signature="e#1721#3431#0" />
+            <element signature="e#5109#9256#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="1963">
+          <caret line="796" column="25" selection-start-line="796" selection-start-column="25" selection-end-line="796" selection-end-column="25" />
           <folding>
             <element signature="e#1970#3101#0" />
             <element signature="e#3344#4826#0" />
@@ -761,11 +765,12 @@
             <element signature="e#7232#9521#0" />
             <element signature="e#9600#12133#0" />
             <element signature="e#12216#14344#0" />
+            <element signature="e#14971#15308#0" />
             <element signature="e#14759#15011#0" />
             <element signature="e#15066#16077#0" />
             <element signature="e#16309#23088#0" />
-            <element signature="e#24094#25232#0" />
-            <element signature="e#25314#26568#0" />
+            <element signature="e#25512#26677#0" />
+            <element signature="e#26762#27922#0" />
             <element signature="e#26658#27657#0" />
             <element signature="e#27740#28622#0" />
             <element signature="e#28709#29736#0" />

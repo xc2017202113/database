@@ -70,15 +70,12 @@
                     where: {'case': paras},
                     loading: false,
                     LAY_CHECKED: true,
-                    cols: [[{field: 'type', title: '涉案类型', width: 200},
+                            cols: [[{field: 'type', title: '涉案类型', width: 200},
                         {field: 'company', title: '公司所在案件中地位', width: 200},
-                        {field: 'case', title: '案由', width: 200},
+                        {field: 'case', title: '案由', width: 500},
                         {field: 'time', title: '公告时期', width: 200},
-                        {field: 'money', title: '案件涉及的金额', width: 200},
-                        {field: 'judge', title: '判决情况', width: 200},
-                        {field: 'implement', title: '执行情况', width: 200},
-                        {field: 'moneytype', title: '币种', width: 200},]]
-                });
+                        {field: 'judge', title: '判决情况', width: 200}]]
+                      });
 
                 //可以照着前面的写 但是要修改检索的值
                 var $ = layui.$, active = {
@@ -111,15 +108,12 @@
                         where: {'case': paras},
                         loading: false,
                         LAY_CHECKED: true,
-                        cols: [[{field: 'type', title: '涉案类型', width: 200},
-                                {field: 'company', title: '公司所在案件中地位', width: 200},
-                                {field: 'case', title: '案由', width: 200},
-                                {field: 'time', title: '公告时期', width: 200},
-                                {field: 'money', title: '案件涉及的金额', width: 200},
-                                {field: 'judge', title: '判决情况', width: 200},
-                                {field: 'implement', title: '执行情况', width: 200},
-                                {field: 'moneytype', title: '币种', width: 200},]]
-                      });
+                          cols: [[{field: 'type', title: '涉案类型', width: 200},
+                        {field: 'company', title: '公司所在案件中地位', width: 200},
+                        {field: 'case', title: '案由', width: 500},
+                        {field: 'time', title: '公告时期', width: 200},
+                        {field: 'judge', title: '判决情况', width: 200}]]
+                });
                    }
              };
 	  //点击搜索按钮根据用户名称查询

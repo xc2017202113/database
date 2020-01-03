@@ -726,21 +726,22 @@ def find_meeting ():
 
 
 @app.route ('/find_case_data', methods=["GET", "POST"])
-def find_case_data ():
+def find_case_data():
     # ---------------------
     firm = request.args.get ("case")
-    print (firm)
-    page = int (request.args.get ('page'))
-    limit = int (request.args.get ('limit'))
+    print(firm)
+    page = int(request.args.get('page'))
+    limit = int(request.args.get('limit'))
     # ---------------------
     sql = "select 案由,公告日期,涉案类型,公司在案件中地位,案件所涉及金额,判决情况,执行情况,币种 from 涉案情况 "
-    sql += "where 案由 like '%%%%%s%%%%'" % firm
-    result = connection.execute (sql)
-    return_dict = {"code": 0, "msg": "", "data": []}
+    sql += "where 案由 like '%%%%%s%%%%'"%firm
+    sql+=" order by 公告日期 "
+    result = connection.execute(sql)
+    return_dict = {"code":0,"msg":"","data":[]}
     # ---------------------
     for row in result:
         row_dict = {}
-        # 要和前端的标签对应
+        #要和前端的标签对应
         # ---------------------
         row_dict['case'] = row['案由']
         row_dict['time'] = row['公告日期']
@@ -750,30 +751,32 @@ def find_case_data ():
         row_dict['judge'] = row['判决情况']
         row_dict['implement'] = row['执行情况']
         row_dict['moneytype'] = row['币种']
-        return_dict['data'].append (row_dict)
-    return_dict['count'] = len (return_dict['data'])
-    return_dict['data'] = return_dict['data'][(page - 1) * 10:(page - 1) * 10 + limit]
-    rst = make_response (json.dumps (return_dict))
+        return_dict['data'].append(row_dict)
+    return_dict['count'] = len(return_dict['data'])
+    return_dict['data'] = return_dict['data'][(page-1)*10:(page-1)*10 + limit]
+    rst = make_response(json.dumps(return_dict))
     rst.headers['Access-Control-Allow-Origin'] = '*'
     return rst
 
 
 @app.route ('/sort_case_data', methods=["GET", "POST"])
-def sort_case_data ():
+def sort_case_data():
     # ---------------------
     firm = request.args.get ("case")
-    print (firm)
-    page = int (request.args.get ('page'))
-    limit = int (request.args.get ('limit'))
-    location = ["被告", "第三方", "第三人", "原告", "NA"]
+    print(firm)
+    page = int(request.args.get('page'))
+    limit = int(request.args.get('limit'))
+    location=["被告","第三方","第三人","原告","NA"]
     if firm in location:
-        sql = "select 案由,公告日期,涉案类型,公司在案件中地位,案件所涉及金额,判决情况,执行情况,币种 from 涉案情况 "
-        sql += "where  公司在案件中地位='%s'" % firm
+        sql = "select 公告日期,案由,涉案类型,公司在案件中地位,判决情况 from case1 "
+        sql += "where  公司在案件中地位='%s'"%firm
+        sql += "order by 公告日期 "
     else:
-        sql = "select 案由,公告日期,涉案类型,公司在案件中地位,案件所涉及金额,判决情况,执行情况,币种 from 涉案情况 "
-        sql += "where  涉案类型='%s'" % firm
-    result = connection.execute (sql)
-    return_dict = {"code": 0, "msg": "", "data": []}
+        sql = "select 公告日期,案由,涉案类型,公司在案件中地位,判决情况 from case2  "
+        sql += "where  涉案类型='%s'"%firm
+        sql += "order by 公告日期 "
+    result = connection.execute(sql)
+    return_dict = {"code":0,"msg":"","data":[]}
     # ---------------------
     for row in result:
         row_dict = {}
@@ -781,14 +784,11 @@ def sort_case_data ():
         row_dict['company'] = row['公司在案件中地位']
         row_dict['case'] = row['案由']
         row_dict['time'] = row['公告日期']
-        row_dict['money'] = row['案件所涉及金额']
         row_dict['judge'] = row['判决情况']
-        row_dict['implement'] = row['执行情况']
-        row_dict['moneytype'] = row['币种']
-        return_dict['data'].append (row_dict)
-    return_dict['count'] = len (return_dict['data'])
-    return_dict['data'] = return_dict['data'][(page - 1) * 10:(page - 1) * 10 + limit]
-    rst = make_response (json.dumps (return_dict))
+        return_dict['data'].append(row_dict)
+    return_dict['count'] = len(return_dict['data'])
+    return_dict['data'] = return_dict['data'][(page-1)*10:(page-1)*10 + limit]
+    rst = make_response(json.dumps(return_dict))
     rst.headers['Access-Control-Allow-Origin'] = '*'
     return rst
 
@@ -800,8 +800,10 @@ def find_company_data ():
     page = int (request.args.get ('page'))
     limit = int (request.args.get ('limit'))
 
-    sql = "select 公司中文全称,公司英文全称,CSRC行业分类,GICS行业分类,公司注册地 from 公司信息 "
-    sql += "where 股票代码".format (socket_code)
+    sql = "select 股票代码,公司中文全称,公司英文全称,CSRC行业分类,GICS行业分类,公司注册地 from 公司信息 "
+    sql += "where 股票代码={}".format (socket_code)
+    # sql += "group by 股票代码"
+    # sql += "having 股票代码".format (socket_code)
 
     result = connection.execute (sql)
 
