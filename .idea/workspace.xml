@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1597753f-ac24-47bc-8e5d-005ce1220cb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sort_case.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sort_case.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/上市公司治理结构_公司管理层信息2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/上市公司治理结构_公司股权信息2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/上市公司治理结构_治理会议信息2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/交易信息.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/公司信息.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/涉案情况.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/股票信息.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/财务数据信息.sql" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1963">
@@ -67,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/templates/load.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -76,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/templates/modify_socket_info.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1100">
-              <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+              <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -108,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="113" column="26" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="26" />
+            <state relative-caret-position="605">
+              <caret line="439" column="14" lean-forward="true" selection-start-line="439" selection-start-column="14" selection-end-line="439" selection-end-column="14" />
               <folding>
                 <element signature="e#288#711#0" />
                 <element signature="e#1721#3431#0" />
@@ -126,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/templates/sort_case.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+              <caret line="116" column="20" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -173,8 +178,8 @@
       <find>交易信息</find>
       <find>find_balanced_sheet_data</find>
       <find>flow_scale_change</find>
-      <find>def find_case_data</find>
       <find>公司信息</find>
+      <find>def find_case_data</find>
     </findStrings>
     <replaceStrings>
       <replace>REAL</replace>
@@ -266,17 +271,6 @@
             <path>
               <item name="big_homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="big_homework" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="big_homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="big_homework" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="big_homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="big_homework" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -336,12 +330,12 @@
       <workItem from="1576815604080" duration="25293000" />
       <workItem from="1576857788438" duration="34969000" />
       <workItem from="1577026659978" duration="22894000" />
-      <workItem from="1577679741144" duration="6472000" />
+      <workItem from="1577679741144" duration="7672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188106000" />
+    <option name="totallyTimeSpent" value="189306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="90" y="0" width="1956" height="1130" extended-state="1" />
@@ -724,33 +718,21 @@
     <entry file="file://$PROJECT_DIR$/templates/modify_socket_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
-          <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+          <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/load.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sort_case.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="113" column="26" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="26" />
-          <folding>
-            <element signature="e#288#711#0" />
-            <element signature="e#1721#3431#0" />
-            <element signature="e#5109#9256#0" />
-          </folding>
+          <caret line="116" column="20" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -783,6 +765,18 @@
             <element signature="e#37651#39034#0" />
             <element signature="e#39125#39751#0" />
             <element signature="e#39844#40422#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc29119f-501a-438c-a4a2-74aa9fb29ca1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="439" column="14" lean-forward="true" selection-start-line="439" selection-start-column="14" selection-end-line="439" selection-end-column="14" />
+          <folding>
+            <element signature="e#288#711#0" />
+            <element signature="e#1721#3431#0" />
+            <element signature="e#5109#9256#0" />
           </folding>
         </state>
       </provider>
